@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy-50: #eef2f6;
+  --color-navy-100: #d5e0eb;
+  --color-navy-200: #aebed0;
+  --color-navy-300: #8198b1;
+  --color-navy-400: #587391;
+  --color-navy-500: #3c5473;
+  --color-navy-600: #293b56;
+  --color-navy-700: #1a2538;
+  --color-navy-800: #111827;
+  --color-navy-900: #0a0e17;
+
+  --color-gold-50: #fbf8e8;
+  --color-gold-100: #f5ecc3;
+  --color-gold-200: #eedb8f;
+  --color-gold-300: #e6c557;
+  --color-gold-400: #dfb22d;
+  --color-gold-500: #c99a22;
+  --color-gold-600: #a77c19;
+  --color-gold-700: #815c13;
+  --color-gold-800: #624312;
+  --color-gold-900: #4a3211;
+
+  --font-playfair: "Playfair Display", serif;
+  --font-inter: "Inter", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-navy-50 text-navy-900 font-inter antialiased transition-colors duration-300;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-playfair tracking-tight text-navy-800;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-navy-900 bg-gold-400 hover:bg-gold-500 shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0;
+  }
+  
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-6 py-3 border border-gold-400 text-base font-medium rounded-md text-gold-600 hover:bg-gold-50 shadow-sm transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0;
+  }
+  
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-md border border-white/40 shadow-xl rounded-2xl overflow-hidden;
+  }
+}
